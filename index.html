@@ -29,7 +29,7 @@
   </style>
 </head>
 <body>
-  <div class="container" ng-controller='ShoppingListController as list'>
+  <div class="container" ng-controller='ToBuyController as list'>
     <h1>Shopping List Check Off</h1>
     <div class="row">
       <!-- To Buy List -->
@@ -44,7 +44,7 @@
       </div>
     </div>
     <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller='ShoppingListController2 as list2'>
+    <div class="col-md-6" ng-controller='AlreadyBoughtController as list2'>
       <h2>Already Bought:</h2>
       <ul>
         <li ng-repeat="item2 in list2.items2">Bought {{ item2.quantity }} {{ item2.name }} </li>

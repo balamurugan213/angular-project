@@ -1,23 +1,20 @@
 ;(function(){
 	angular
 		.module('mainApplication', [])
+		.controller('ToBuyController', ToBuyController)
 		.controller(
-			'ShoppingListController',
-			ShoppingListController
-		)
-		.controller(
-			'ShoppingListController2',
-			ShoppingListController2
+			'AlreadyBoughtController',
+			AlreadyBoughtController
 		)
 		.provider(
 			'ShoppingListService',
 			ShoppingListServiceProvider
 		)
 
-	ShoppingListController.$inject = [
+	ToBuyController.$inject = [
 		'ShoppingListService'
 	]
-	function ShoppingListController(ShoppingListService){
+	function ToBuyController(ShoppingListService){
 		var list = this
 		list.fil = 'aaa'
 
@@ -38,10 +35,10 @@
 		}
 	}
 
-	ShoppingListController2.$inject = [
+	AlreadyBoughtController.$inject = [
 		'ShoppingListService'
 	]
-	function ShoppingListController2(ShoppingListService){
+	function AlreadyBoughtController(ShoppingListService){
 		var list2 = this
 		list2.items2 = ShoppingListService.getItems2()
 		list2.it2 = ShoppingListService.getIt2()
